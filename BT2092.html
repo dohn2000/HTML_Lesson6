@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <form class="panel" onsubmit="return validateData()">
+        <h2>DANG NHAP HE THONG</h2>
+        <div class="panel-mid">
+            <img class="login" src="login.png" alt="">
+            <div style="margin: 15px;">
+                <div >
+                    <label class="Nhap">Tai Khoan</label>
+                    <input type="text" class="right">
+                </div>
+                <div >
+                    <label class="Nhap">Mat Khau</label>
+                    <input type="text" class="right">
+                </div>
+            </div>
+        </div>
+        <div class="bot">
+            <button>Dang Nhap</button>
+            <Button >Nhap lai</Button>
+        </div>
+    </form>
+
+    <div class="all" id="modal">
+        <div class="modal" >
+            <div class="content">
+                <p>Đăng nhập thành công</p>
+                <div class="footer">
+                    <button class="button" id="done" onclick="hidePopup()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateData() {
+            popupTag = document.getElementById('modal')
+            popupTag.style.display = "block"
+            return false;
+        }
+        function hidePopup() {
+            popupTag = document.getElementById('modal')
+            modal.style.display = "none"
+            window.open('infor.html.html')
+        }
+    </script>
+</body>
+</html>
